@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const request = require('request');
 
-const episodeNumber = process.argv[2]
+const episodeNumber = process.argv[2];
 const apiUrl = `https://swapi-api.hbtn.io/api/films/${episodeNumber}`;
 
 request(apiUrl, (err, response, body) => {

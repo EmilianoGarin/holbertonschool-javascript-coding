@@ -11,7 +11,7 @@ request(url, (err, response, body) => {
 
   const studentData = JSON.parse(body);
 
-  const taskCompleted = studentData.filter((state) => state.completed == true);
+  const taskCompleted = studentData.filter((state) => state.completed === true);
 
   const ret = {};
   taskCompleted.forEach(task => {

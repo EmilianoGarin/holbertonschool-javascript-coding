@@ -13,7 +13,7 @@ request(apiUrl, (err, response, body) => {
 
   // Filtra las películas en las que aparece el personaje
   const moviesWithCharacter = filmsData.filter((film) =>
-    film.characters.includes(`https://swapi-api.hbtn.io/api/people/${characterId}/`)
+    film.characters.some((character) => character.includes(`people/${characterId}/`))
   );
 
   // Imprime el número de películas en las que aparece "Wedge Antilles"
